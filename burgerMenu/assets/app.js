@@ -10,6 +10,7 @@ if (menuToggle) {
 }
 function menuOpen() {
 	menu.classList.toggle('menu--open');
+	document.body.classList.toggle('no-scroll');
 }
 
 // click sur les liens

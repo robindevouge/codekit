@@ -14,7 +14,7 @@
 }
 
 .menu__toggle {
-	position: absolute;
+	position: fixed;
 	top: 20px;
 	right: 20px;
 	z-index: 20;
@@ -23,4 +23,9 @@
 
 .menu--open .menu__list {
 	transform: translateX(0);
+}
+
+/* classes utilitaires */
+.no-scroll {
+	overflow: hidden;
 }
