@@ -1,20 +1,20 @@
-"use strict";
+'use strict';
 
 const menuToggle = document.querySelector('.menu__toggle');
 const menu = document.querySelector('.menu');
 const menuLinks = document.querySelectorAll('.menu__el a');
 
 // click sur le bouton
-if(menuToggle){
-    menuToggle.addEventListener('click', menuOpen);
+if (menuToggle) {
+	menuToggle.addEventListener('click', menuOpen);
 }
-function menuOpen(){
-    menu.classList.toggle("menu--open");
+function menuOpen() {
+	menu.classList.toggle('menu--open');
 }
 
 // click sur les liens
-if(menuLinks){
-    for(let menuLink of menuLinks){
-        menuLink.addEventListener("click", menuOpen);
-    }
+if (menuLinks) {
+	for (let menuLink of menuLinks) {
+		menuLink.addEventListener('click', menuOpen);
+	}
 }
