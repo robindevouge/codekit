@@ -1,9 +1,11 @@
-body {
-	height: 8000px;
-	margin: 0;
-	/* pour simuler le scroll */
+* {
+	box-sizing: border-box;
 }
 
+.tab {
+	padding: 0 10%;
+	margin-bottom: 20px;
+}
 .tab__nav {
 	display: flex;
 	gap: 10px;
@@ -11,18 +13,74 @@ body {
 	margin: 0;
 	padding: 0;
 }
-.tab__el {
+.tab__el a {
+	display: block;
 	padding: 10px;
 }
 
+.tab__container {
+	width: 100%;
+	background: #eee;
+}
 .tab__content {
-	display: none;
+	padding: 10px;
 }
 .tab__content--active {
 	display: block;
 }
 .tab__el--active {
-	background-color: white;
-	color: blue;
-	border: blue solid 3px;
+	background-color: #eee;
+}
+
+/* first tab block animations : fade-in/fade-out */
+.tab--a {
+	.tab__container {
+		position: relative;
+		/* height change transition */
+		transition: height 0.3s ease-out;
+		overflow: hidden;
+	}
+
+	.tab__content {
+		position: absolute;
+		width: 100%;
+		overflow: hidden;
+		/* hidden when not active but allows for transition */
+		opacity: 0;
+		transition: opacity 0.3s;
+		/* prevents any interaction when not active */
+		pointer-events: none;
+	}
+
+	.tab__content--active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+/* second tab block animations : slide from/to sides */
+.tab--b {
+	.tab__container {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		/* height change transition */
+		transition: height 0.3s ease-out;
+	}
+
+	.tab__content {
+		position: absolute;
+		min-width: 100%;
+		transition: transform 0.3s ease-out;
+	}
+
+	/* move all tabs before the active one to the left */
+	:has(~ .tab__content--active) {
+		transform: translateX(-100%);
+	}
+
+	/* move all tabs after the active one to the right */
+	.tab__content--active ~ .tab__content {
+		transform: translateX(100%);
+	}
 }
