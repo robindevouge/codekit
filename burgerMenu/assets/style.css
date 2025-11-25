@@ -7,11 +7,12 @@
 	z-index: 10;
 	background-color: #bada55;
 	margin: 0;
-	/* masquer le menu*/
-	display: none;
-	/* transition: .3s;
-    transform: translateX(100%); */
+	/* masquer le menu */
+	transform: translateX(100%);
+	/* animer l'ouverture/fermeture */
+	transition: transform .4s ease-out;
 }
+
 .menu__toggle {
 	position: absolute;
 	top: 20px;
@@ -19,7 +20,7 @@
 	z-index: 20;
 	cursor: pointer;
 }
+
 .menu--open .menu__list {
-	display: block;
-	/* transform: translateX(0); */
+	transform: translateX(0);
 }
