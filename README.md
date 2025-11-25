@@ -6,7 +6,7 @@ Ceci est la branche dans laquelle se trouvent les versions animées du CodeKit.
 
 - [x] burgerMenu
 - [x] tab
-- [ ] slider
+- [x] slider
 
 ## À animer pour la remise (cocher les cases une fois que c'est fait)
 
