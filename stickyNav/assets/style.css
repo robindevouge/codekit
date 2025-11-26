@@ -1,26 +1,26 @@
-body{
-    height: 8000px;
-    margin: 0;
-    /* pour simuler le scroll */
+body {
+	height: 8000px;
+	margin: 0;
+	/* pour simuler le scroll */
 }
 
-.menu{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: aquamarine;
-    transition: .3s linear;
+.menu {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: aquamarine;
+	transition: 0.3s linear;
 }
-.menu__list{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.menu__list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
 /* cacher le menu */
-.menu--hide{
-    transform: translateY(-100%);
+.menu--hide {
+	transform: translateY(-100%);
 }
